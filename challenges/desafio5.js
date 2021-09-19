@@ -1,7 +1,7 @@
 db.produtos.updateMany({
-    nome: { $ne: "McChicken", }
+    nome: { $ne: "McChicken" },
 }, {
-    $addToSet: { ingredientes: "ketchup", }
+    $addToSet: { ingredientes: "ketchup" },
 });
 
 db.produtos.find({}, {

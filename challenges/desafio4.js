@@ -3,7 +3,7 @@ db.produtos.updateOne({
 }, {
     $set: {
         ultimaModificacao: Date(),
-    }
+    },
 });
 
 db.produtos.find({
