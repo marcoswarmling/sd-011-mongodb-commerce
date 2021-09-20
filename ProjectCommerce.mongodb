@@ -3,8 +3,8 @@ use ("commerce");
 // db.produtos.find();
 
 db.produtos.updateMany(
-  { },
-   { $pull: { ingredientes: "cebola" } }
+  { nome: "Quarteirão com Queijo" },
+   { $pop: { ingredientes: -1 }  }
 );
 
 db.produtos.find(
