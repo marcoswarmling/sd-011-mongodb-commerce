@@ -3,15 +3,19 @@ use ("commerce");
 // db.produtos.find();
 
 db.produtos.updateMany(
-  { nome: "Big Mac" },
-   { $currentDate: { ultimaModificacao: true } }
+  {
+    nome: { $ne: "McChicken" },
+    ingredientes: { $elemMatch: { $ne: "ketchup" } }
+  },
+   { $push: { ingredientes: "ketchup" } }
 );
 
 db.produtos.find(
-  {ultimaModificacao: { $exists: true }},
+  { },
   { 
     nome: 1,
-    avaliacao: 1,
+    ingredientes: 1,
     _id: 0
   }
 );
+  
