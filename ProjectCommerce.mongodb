@@ -4,10 +4,9 @@ use ("commerce");
 
 db.produtos.updateMany(
   {
-    nome: { $ne: "McChicken" },
-    ingredientes: { $elemMatch: { $ne: "ketchup" } }
+    nome: { $in: ["Big Mac", "Quarteirão com Queijo"] },
   },
-   { $push: { ingredientes: "ketchup" } }
+   { $push: { ingredientes: "bacon" } }
 );
 
 db.produtos.find(
