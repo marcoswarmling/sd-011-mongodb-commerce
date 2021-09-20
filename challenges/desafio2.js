@@ -1,9 +1,9 @@
-db.produtos.updateOne(
-  { nome: "Big Mac" },
-  { $unset: { curtidas: "" } },
+db.produtos.updateMany(
+  { valorUnitario: { $exists: false } },
+  { $set: { valorUnitario: NumberDecimal("0.00") } },
 );
 
 db.produtos.find(
   {},
-  { nome: 1, curtidas: 1, _id: 0 },
+  { nome: 1, valorUnitario: 1, _id: 0 },
 );
