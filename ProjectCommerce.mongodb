@@ -2,19 +2,18 @@ use ("commerce");
 
 // db.produtos.find();
 
-db.produtos.createIndex(
-  { descricao: "text" },
-  { default_language: "portuguese" }
+db.produtos.updateMany(
+  {},
+  { $rename: { descricao: "descricaoSite" }}
   );
 
-db.produtos.count({ $text: { $search: "feito com" } });
-
-// db.produtos.find(
-//   { },
-//   { 
-//     nome: 1,
-//     tags: 1,
-//     _id: 0
-//   }
-// );
+db.produtos.find(
+  { },
+  { 
+    nome: 1,
+    descricao: 1,
+    descricaoSite: 1,
+    _id: 0
+  }
+);
 
