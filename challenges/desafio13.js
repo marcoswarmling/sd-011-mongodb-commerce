@@ -10,5 +10,8 @@ db.produtos.updateMany(
 );
 
 db.produtos.find(
-  { $and: [{ "valoresNutricionais.tipo": { $eq: "sódio" } }, { "valoresNutricionais.percentual": { $gte: 40 } }] },
+  { $and: [
+    { "valoresNutricionais.tipo": { $eq: "sódio" } },
+    { "valoresNutricionais.percentual": { $gte: 40 } },
+  ] },
 );
