@@ -1,0 +1,1 @@
+db.commerce.count({ $text: { $search: "frango hamburguer" } })
