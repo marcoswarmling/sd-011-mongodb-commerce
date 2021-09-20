@@ -5,7 +5,10 @@ db.produtos.updateOne({ nome: "Big Mac" },
   { $inc: { "vendasPorDia.3": 60 } });
 
 db.produtos.updateOne({ nome: "Big Mac" },
-{ $inc: { "vendasPorDia.3": 60 } });
+  { $inc: { "vendasPorDia.3": 60 } });
+
+db.produtos.updateMany({ tag: { all: ["pão", "bovino"] } },
+  { $inc: { "vendasPorDia.6": 120 } });
 
 db.produtos.find({}, 
-{ _id: 0, nome: 1, ingredientes: 1 });
+  { _id: 0, nome: 1, vendasPorDia: 1 });
