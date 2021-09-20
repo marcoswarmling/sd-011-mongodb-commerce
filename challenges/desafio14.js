@@ -2,12 +2,12 @@ db.produtos.updateMany(
     { $and: 
       [
         { "valoresNutricionais.2.percentual":
-        { $gt: 20
-        }
+        { $gt: 20,
+        },
         }, 
         { "valoresNutricionais.2.percentual":
-        { $lt: 40
-        }
+        { $lt: 40,
+        },
         },
       ],
     },
@@ -17,6 +17,6 @@ db.produtos.updateMany(
   db.produtos.find({}, {
       _id: 0, 
       nome: 1,
-      tags:1,
+      tags: 1,
   });
   
