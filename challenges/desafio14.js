@@ -19,4 +19,3 @@ db.produtos.updateMany(
       nome: 1,
       tags: 1,
   });
-  
