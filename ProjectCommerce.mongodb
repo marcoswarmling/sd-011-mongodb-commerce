@@ -2,7 +2,7 @@ use ("commerce");
 
 // db.produtos.find();
 
-db.produtos.count({ nome: { $regex: /mc/i } });
+db.produtos.count({  ingredientes: { $size: 4 } });
 
 // db.produtos.find(
 //   { },
