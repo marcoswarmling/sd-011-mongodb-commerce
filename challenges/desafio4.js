@@ -4,4 +4,4 @@ db.produtos.updateOne({ nome: "Big Mac" },
 });
 
 db.produtos.find({ ultimaModificacao: { $exists: true } }, 
-{ _id: 0, nome: 1, ingredientes: 1 });
+{ _id: 0, nome: 1 });
