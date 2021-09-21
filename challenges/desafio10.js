@@ -10,7 +10,6 @@ db.produtos.updateOne({ nome: "Big Mac" }, {
         "vendasPorDia.4": 0,
         "vendasPorDia.5": 0,
         "vendasPorDia.6": 0,
-        "vendasPorDia.7": 0,
     },
 });
 
@@ -30,8 +29,7 @@ db.produtos.updateMany(
         "vendasPorDia.3": 0,
         "vendasPorDia.4": 0,
         "vendasPorDia.5": 0,
-        "vendasPorDia.6": 0,
-        "vendasPorDia.7": 120,
+        "vendasPorDia.6": 120,
     },
 },
 );
