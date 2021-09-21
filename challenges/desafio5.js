@@ -1,2 +1,3 @@
-db.produtos.updateMany({ nome: { $ne: "McChicken" } }, { $addToSet: { ingredientes: "Ketchup" } });
-db.produtos.find({}, { nome: 1, ingredientes: 1, _id: 0 });
+db.produtos.updateMany({ $or: [{ nome: { $ne: "McChicken" }, ingredientes: { $ne: "ketchup" } }] },
+{ $push: { ingredientes: { $each: ["ketchup"] } } });
+db.produtos.find({}, { nome: true, ingredientes: true, _id: false });
