@@ -7,7 +7,7 @@ db.produtos.updateOne({ nome: "Big Mac" },
 db.produtos.updateOne({ nome: "Big Mac" },
   { $inc: { "vendasPorDia.3": 60 } });
 
-db.produtos.updateMany({ tag: { all: ["pão", "bovino"] } },
+db.produtos.updateMany({ tag: { $in: ["pão", "bovino"] } },
   { $inc: { "vendasPorDia.6": 120 } });
 
 db.produtos.find({}, 
