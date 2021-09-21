@@ -4,4 +4,5 @@ db.produtos.updateOne(
 );
 
 db.produtos.find({},
-    { _id: false, nome: true, ingredientes: true });
+    { _id: false, nome: true, ingredientes: true,
+});

@@ -1,1 +1,3 @@
-db.produtos.count({ nome: /mc/i });
+db.produtos.count(
+    { nome: /mc/i },
+);

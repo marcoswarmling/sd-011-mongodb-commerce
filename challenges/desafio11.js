@@ -3,4 +3,5 @@ db.produtos.updateMany({},
 });
 
 db.produtos.find({},
-    { _id: false, nome: true, tags: true });
+    { _id: false, nome: true, tags: true,
+});
