@@ -1,4 +1,4 @@
-db.produtos.updateMany({ $or: [{
+db.produtos.updateMany({ $and: [{
   nome: { $ne: "McChicken" } }, { ingredientes: { $ne: "ketchup" } }],
 },
    {
