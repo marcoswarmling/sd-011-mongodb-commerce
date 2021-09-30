@@ -1,11 +1,4 @@
 db.produtos.updateMany(
-  {},
-  {
-    $set: { valorUnitario: NumberDecimal(0.00) },
-  },
-);
-
-db.produtos.updateMany(
   { tags: "bovino" },
   {
     $inc: { avaliacao: 5 },
