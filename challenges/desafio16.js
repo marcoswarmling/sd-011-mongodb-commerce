@@ -1,2 +1,2 @@
-db.produtos.count({ ingredientes: { $size: 4 }});
+db.produtos.count({ ingredientes: { $size: 4 } });
 // explicação  do course https://app.betrybe.com/course/back-end/mongodb-updates-simples-e-complexos/updates-complexos-arrays-parte-2/4fd2d65a-b343-43a7-adb2-fc06227153f7/conteudos/180eb9df-26a4-4499-a60c-1f91d6e45f79/operador-size/5e6435ac-129b-4298-acef-508801a79a99?use_case=side_bar
