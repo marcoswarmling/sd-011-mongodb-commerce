@@ -1,3 +1,3 @@
 db.produtos.updateMany({}, { $rename: { descricao: "descricaoSite" } });
 db.produtos.find({}, { nome: 1, descricao: 1, descricaoSite: 1, _id: 0 });
-//Explicação tirada do course https://app.betrybe.com/course/back-end/mongodb-updates-simples-e-complexos/updates-simples/5b7a5a21-706a-4f75-9354-cbd569ad7de3/conteudos/5ea3f9d5-95c4-498d-9f33-50e0e13739d1/renomeando-campos-com-o-operador-rename/022a82f0-0fee-49cc-9ce9-65d9792822b5?use_case=side_bar
+// Explicação tirada do course https://app.betrybe.com/course/back-end/mongodb-updates-simples-e-complexos/updates-simples/5b7a5a21-706a-4f75-9354-cbd569ad7de3/conteudos/5ea3f9d5-95c4-498d-9f33-50e0e13739d1/renomeando-campos-com-o-operador-rename/022a82f0-0fee-49cc-9ce9-65d9792822b5?use_case=side_bar
